@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Horizontal overflow ko hide karne ke liye */
+    scroll-behavior: smooth;
+}
+
+nav{
+    border: 2px solid black;
+    display: flex;
+    padding: 20px 20px;
+    color: white;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo{
+    width: 60%;
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    color: #42cef5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+ul{
+    display: flex;
+}
+
+ul li{
+    list-style: none;
+}
+
+nav i{
+    display: none;
+}
+.navBtn{
+    margin: 0px 10px;
+    font-size: 20px;
+    padding: 5px 25px;
+    border-radius: 25px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: 3px solid #42cef5 ;
+    background-color: black;
+    text-decoration: none;
+}
+
+.navBtn:hover{
+    filter: drop-shadow(0 0 10px #fffdef);
+}
+
+.video-box{
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+}
+
+.video-box video{
+    width: 100%;
+    height: 100vh;
+    object-fit: fill;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    padding: 80px 50px;
+    padding-bottom: 10px;
+    color: #42cef5;
+    background-image: linear-gradient(324deg, transparent 0%, transparent 45%,rgba(186, 186, 186,0.04) 45%, rgba(186, 186, 186,0.04) 47%,transparent 47%, transparent 100%),linear-gradient(208deg, transparent 0%, transparent 40%,rgba(186, 186, 186,0.04) 40%, rgba(186, 186, 186,0.04) 80%,transparent 80%, transparent 100%),linear-gradient(202deg, transparent 0%, transparent 20%,rgba(186, 186, 186,0.04) 20%, rgba(186, 186, 186,0.04) 40%,transparent 40%, transparent 100%),linear-gradient(338deg, transparent 0%, transparent 10%,rgba(186, 186, 186,0.04) 10%, rgba(186, 186, 186,0.04) 72%,transparent 72%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
+}
+
+.container .text-box{
+    width: 50%;
+    padding: 20px 30px;
+    padding-left: 50px;
+}
+
+.container .text-box h1{
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.container .text-box p{
+    font-size: 20px;
+    color: white;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+.container .img-box{
+    width: 50%;
+    height: 600px;
+    padding: 0px 50px;
+}
+
+.container .img-box img{
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid #42cef5;
+}
+
+/* container 2 */
+
+.container2{
+    padding: 50px;
+    color: white;
+    background-image: linear-gradient(324deg, transparent 0%, transparent 45%,rgba(186, 186, 186,0.04) 45%, rgba(186, 186, 186,0.04) 47%,transparent 47%, transparent 100%),linear-gradient(208deg, transparent 0%, transparent 40%,rgba(186, 186, 186,0.04) 40%, rgba(186, 186, 186,0.04) 80%,transparent 80%, transparent 100%),linear-gradient(202deg, transparent 0%, transparent 20%,rgba(186, 186, 186,0.04) 20%, rgba(186, 186, 186,0.04) 40%,transparent 40%, transparent 100%),linear-gradient(338deg, transparent 0%, transparent 10%,rgba(186, 186, 186,0.04) 10%, rgba(186, 186, 186,0.04) 72%,transparent 72%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
+}
+
+.container2 .row{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #42cef5;
+    letter-spacing: 1.5px;
+}
+
+.row p{
+    margin: 20px 0px;
+    width: 80%;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+}
+
+.container2 .cards{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+    margin-bottom: 20px;
+    
+}
+
+.container2 .card{
+    width: 300px;
+    height: 350px;
+    border: 2px solid #42cef5;
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+    color: #42cef5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.container2 .card img{
+    height: 250px;
+    width: 297px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+.container2 .contact{
+    margin: 100px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.container2 .contact button{
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 3px solid #42cef5;
+    background: transparent;
+    color: white;
+}
+
+.container2 .contact button:hover{
+    background-color: black;
+    filter: drop-shadow(0 0 10px #f8f8f6);
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    nav{
+        position: fixed;
+    }
+    .logo {
+      font-size: 6vw;
+      width: 95%;
+    }
+  
+    ul {
+      flex-direction: column;
+      display: none;
+    }
+    
+    nav i{
+        display: inline;
+        font-size: 6vw;
+    }
+    .navBtn {
+      margin: 5px 0;
+    }
+
+.video-box {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    display: block; 
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure no overflow issues */
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+
+.video-box video {
+    width: 100%; /* Ensure the video takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the video covers the entire area of the container */
+    display: block; /* Ensures block display */
+}
+
+.container h1{
+    font-size: 7vw;
+}
+
+  
+    .container, .container2 {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .container .text-box, .container .img-box {
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content:center ;
+      align-items: center;
+    }
+
+    .text-box p{
+        text-align: justify;
+        font-size: 5vw;
+    }
+    
+    .container .img-box img {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+    }
+  
+    .container2 .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .container2 .card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+
+    .container2 .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        border: none; /* Remove any unnecessary borders */
+    }
+    
+  
+    .row p {
+      width: 100%;
+    }
+  }
+  
+
