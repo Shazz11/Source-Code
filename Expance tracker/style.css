@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    border: 2px solid black;
+    padding: 20px 20px;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+.box input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    width: 400px;
+}
+
+.buttons{
+    margin-top: 10px;
+}
+
+button{
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: whitesmoke;
+    color: blue;
+    border: 1px solid blue;
+}
+
+.display{
+    margin-top: 20px;
+}
+
+.display textarea{
+    color: black;
+    font-size: 16px;
+    border: none;
+    resize: vertical;
+    outline: none;
+    min-height: 100px; /* Minimum height of the textarea */
+    max-height: 300px; /* Maximum height of the textarea */
+    overflow-y: auto; /* Adds a vertical scrollbar when needed */
+}
+
+.display input{
+    color: black;
+    width: 300px;
+}
+
+
+#total{
+    margin-top: 0px;
+    padding: 0px ;
+    width: 150px;
+    float: right;
+    text-align: end;
+    border: none;
+    font-size: 20px;
+}
+
+.col{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
