@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;;
+}
+
+header{
+    background-color: rgb(11, 218, 245);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 65%;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+ul{
+    display: flex;
+    gap: 4rem;
+}
+
+li, a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.mobile-nav-btn{
+    width: 10%;
+    margin-left: 10px;
+    display: none;
+}
+
+.mobile-nav-icon{
+    color: black;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.mobile-nav-icon[ name= "close"]{
+    display: none;
+}
+
+/* media query */
+
+@media (max-width: 980px){
+
+    nav{
+        /* display: none; //dont to this because animation dont work on "display: none;" */
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* for transition */
+        transform: translate(100%);  /*its send our navbar to right side */
+        transition: all 0.5s linear;
+
+        /* to hide navbar*/
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    html{
+        overflow-x: hidden;     /*this prperty hide our navbar in mobile view */
+    }
+    
+    body{
+        overflow-x: hidden;     /*this prperty hide our navbar in mobile view */
+    }
+
+    .navbar-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .logo{
+        width: 80%;
+    }
+
+    .mobile-nav-btn{
+        display: inline-block;
+        width: 10%;
+        cursor: pointer;
+        z-index: 999;
+        font-size: 20px;
+    }
+
+    .active .navbar{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    /*when user open navbar menu in mobile*/
+    .active .mobile-nav-btn .mobile-nav-icon[name= "close"]{
+        display: block;  /*yaha humne jis cross icon ko hide kara tha usko visible kara diya*/
+    } 
+
+    .active .mobile-nav-btn .mobile-nav-icon[name= "menu"]{
+        display: none;  /*is line me humne menu icon hide kar diya*/
+    }    
+
+}
+
